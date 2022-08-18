@@ -1,5 +1,6 @@
 package com.xworkz.cartooncharacterRunner;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,5 +37,52 @@ public class CartoonRunner
 	list.add(entity9);
 	Boolean save = dao.save(list);
 	System.out.println(save);
+	CartoonEntity entity11=dao.findByName("Jerry");
+	System.out.println(entity11);
+	
+    Integer inti=dao.total();
+     System.out.println(inti);
+	
+CartoonEntity cartoon =	dao.findByMaxCreatedDate();
+	System.out.println(cartoon);
+
+CartoonEntity raji	=dao.findByNameAndCountryAndGenderAndAuthor("Bheem", "india", "male", "ramcharan");
+    System.out.println(raji);
+	
+	String strag=dao.findAuthorByName("ramcharan");
+	System.out.println(strag);
+	
+	LocalDate ld = dao.findCreatedDateByAuthor("ramcharan");
+	System.out.println(ld);
+	
+	Object[] obj = dao.findNameAndCountryByAuthor("ramcharan");
+	System.out.println(obj[0]);
+	System.out.println(obj[1]);
+	
+	dao.updateAuthorByName("Disney","chutti");
+     dao.updateTypeByName("multiRaju", "oswald");
+     dao.deleteByName("Motupatlu");
+   dao.findAll().forEach(System.out::println);
+
+  		 dao.findAllAuthor("ramcharan").forEach(System.out::println);
+
+  		 dao.findAllAuthorAndGender("ramcharan","Male").forEach(System.out::println);
+
+  		 dao.findAllName().forEach(System.out::println);
+
+  		 dao.findAllcountry().forEach(System.out::println);
+
+  		dao.findAllNameAndCountry().forEach(object->System.out.println(object[0]+"::"+object[1]));
+
+  		dao.findAllNameAndCountryAndAuthor().forEach(object -> System.out.println(object[0] + "::" + object[1] + "::" + object[2]));
+
+  				
+  	}
+
+  
+
 }
-}
+
+
+
+
