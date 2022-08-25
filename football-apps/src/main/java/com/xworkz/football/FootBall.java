@@ -3,18 +3,40 @@ package com.xworkz.football;
 public class FootBall
 {
 String name;
-int price;
+private String brand;
+private Double price;
 
 
-  public FootBall(String throwballName)
-  {
-	 this.name=throwballName; 
-	 System.out.println(this.getClass().getSimpleName()+"bean is created");
-  }
-  public FootBall(String throwballName,int price)
-  {
-	  this.name=throwballName;
-	  this.price=price;
-	  System.out.println("name and int is created");
-  }
+
+public FootBall() {
+	System.out.println(this.getClass().getSimpleName());
 }
+
+
+public String getBrand() {
+	return brand;
+}
+
+
+public void setBrand(String brand) {
+	this.brand = brand;
+}
+
+
+public Double getPrice() {
+	return price;
+}
+
+
+public void setPrice(Double price) {
+	this.price = price;
+}
+
+
+@Override
+public String toString() {
+	return "FootBall [brand=" + brand + ", price=" + price + "]";
+}
+}
+
+
