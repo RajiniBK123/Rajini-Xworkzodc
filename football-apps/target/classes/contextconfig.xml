@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XLMSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+      
+      <bean class="/throwball-apps/src/main/java/com/xworkz/throwball/ThrowBall.java"></bean>
+      <!-- more bean definitions go here -->
+      
+      <bean class="java.lang.Integer">
+<constructor-arg name="value" value="12"></constructor-arg>
+</bean>
+<bean class="java.lang.Byte"> <constructor-arg name="value" value="78"></constructor-arg> </bean>
+<bean class="java.lang.Short"> <constructor-arg name="Rajini" value="3456"></constructor-arg> </bean>
+<bean class="java.lang.Long"> <constructor-arg name="value" value="63636447256"></constructor-arg> </bean>
+<bean class="java.lang.Double">  <constructor-arg name="value" value="8904"></constructor-arg> </bean>
+<bean class="java.lang.Float"> <constructor-arg name="value" value="2000.0></constructor-arg> </bean>
+<bean class="java.lang.Character"> <constructor-arg name="value" value="R"></constructor-arg> </bean>
+<bean class="java.lang.Boolean"> <constructor-arg name="value" value="true"></constructor-arg> </bean>
+<bean class="java.lang.String"> <constructor-arg name="value" value="RajiniBK"></constructor-arg> </bean>
+</beans> 
