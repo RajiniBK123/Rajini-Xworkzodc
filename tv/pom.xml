@@ -1,0 +1,34 @@
+<<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.xworkz.tv.Tv" >
+  <constructor-arg name="name" value="Samsung"></constructor-arg>
+  <constructor-arg name="brand" value="LG"></constructor-arg>
+  <constructor-arg name="price" value="100000"></constructor-arg>
+   <constructor-arg name="display" ref="disp"></constructor-arg>
+   <constructor-arg name="remote" ref="V"> </constructor-arg>   
+   <constructor-arg name="box" ref="P"></constructor-arg> 
+   <constructor-arg name="stand" ref="B"></constructor-arg>
+   </bean>
+
+<!-- String name, String brand, double price, TvDisplay display, TvRemote remote, TvSetupbox box,
+			TvStand stand -->
+
+<bean class="com.xworkz.tv.TvDisplay"  id="disp">
+<constructor-arg name="type" value="hi"></constructor-arg>
+</bean>
+<bean class="com.xworkz.tv.TvRemote"  id="V">
+<constructor-arg name="type" value="hello"></constructor-arg>
+</bean>
+<bean class ="com.xworkz.tv.TvSetupbox" id="P">
+<constructor-arg name="companyName" value="sum"></constructor-arg>
+</bean>
+<bean class="com.xworkz.tv.TvStand" id="B">
+<constructor-arg name="type" value="super"></constructor-arg>
+</bean>
+
+</beans>
